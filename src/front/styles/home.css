@@ -1,0 +1,12 @@
+#home-container {
+  border: solid red 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#home-container .container {
+  margin: auto;
+  text-align: center;
+}

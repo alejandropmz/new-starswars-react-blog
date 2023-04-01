@@ -1,0 +1,12 @@
+#general-card {
+  margin: 20px 0;
+}
+
+#general-card .card-body {
+  text-align: center;
+  margin: 10px 0;
+}
+
+#general-card .card-body * {
+  margin: 5px 0;
+}
