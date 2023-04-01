@@ -1,5 +1,6 @@
 @import url('front/styles/home.css');
 @import url('front/styles/generalcard.css');
+@import url('front/styles/detailcard.css');
 
 * {
   margin: 0;

@@ -1,14 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-export const GeneralCard = ({ img, title }) => {
+export const GeneralCard = ({ img, title, link }) => {
   return (
     <div id="general-card" className="card" style={{ width: "18rem" }}>
       <img src={img} className="card-img-top" alt="..." />
       <div className="card-body">
         <h5 className="card-title">{title}</h5>
-        <a href="#" className="btn btn-primary">
+        <Link to={link} className="btn btn-primary">
           Go somewhere
-        </a>
+        </Link>
       </div>
     </div>
   );

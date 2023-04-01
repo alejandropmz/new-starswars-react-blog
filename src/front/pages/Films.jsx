@@ -20,9 +20,11 @@ export const Films = () => {
       <h1>films</h1>
       <div id="" className="row d-flex justify-content-center">
         {store.films.map((film, index) => (
-          <div className="col-sm-12 col-md-3 d-flex justify-content-center">
+          <div
+            key={index}
+            className="col-sm-12 col-md-3 d-flex justify-content-center"
+          >
             <GeneralCard
-              key={index}
               img={`https://starwars-visualguide.com/assets/img/films/${film.uid}.jpg`}
               title={film.properties.title}
             />

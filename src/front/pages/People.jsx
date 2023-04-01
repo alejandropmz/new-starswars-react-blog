@@ -14,7 +14,10 @@ export const People = () => {
       <h1>People</h1>
       <div className="row d-flex justify-content-center">
         {store.people.map((people, index) => (
-          <div className="col-sm-12 col-md-3 d-flex justify-content-center">
+          <div
+            key={index}
+            className="col-sm-12 col-md-3 d-flex justify-content-center"
+          >
             <GeneralCard
               img={`https://starwars-visualguide.com/assets/img/characters/${people.uid}.jpg`}
               title={people.name}
