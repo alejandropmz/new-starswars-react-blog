@@ -1,28 +1,28 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Context } from "../store/appContext";
+import { GeneralCard } from "../components/GeneralCard";
 
 export const Species = () => {
   const { store, actions } = useContext(Context);
-  const [show, setShow] = useState(false);
 
-  const showContent = () => {
+  useEffect(() => {
     actions.getSpecies();
-    setShow(!show);
-  };
+  });
 
   return (
-    <div>
+    <div className="container-fluid">
       <h1>Species</h1>
-      <button onClick={showContent} className="btn btn-warning">
-        {!show ? "Load species" : "Disapear species"}
-      </button>
-      <ul>
-        {show
-          ? store.species.map((specie, index) => (
-              <li key={index}>Name: {specie.name}</li>
-            ))
-          : ""}
-      </ul>
+      <div className="row justify-content-center">
+        {store.species.map((specie, index) => (
+          <div className="col-sm-12 col-md-3 d-flex justify-content-center">
+            <GeneralCard
+              key={index}
+              img={`https://starwars-visualguide.com/assets/img/species/${specie.uid}.jpg`}
+              title={specie.name}
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
