@@ -1,26 +1,28 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Context } from "../store/appContext";
+import { GeneralCard } from "../components/GeneralCard";
 
 export const Planets = () => {
   const { store, actions } = useContext(Context);
-  const [show, setshow] = useState(false);
 
-  const showContent = () => {
+  useEffect(() => {
     actions.getPlanets();
-    setshow(!show);
-  };
+  }, []);
 
   return (
     <div>
       <h1>Planets</h1>
-      <button onClick={showContent} className="btn btn-warning">
-        {show ? "Disapear planets" : "Show planets"}
-      </button>
-      {show
-        ? store.planets.map((planet, index) => (
-            <li key={index}> Name: {planet.name} </li>
-          ))
-        : ""}
+      <div className="row d-flex justify-content-center">
+        {store.planets.map((planet, index) => (
+          <div className="col-sm-12 col-md-3 d-flex justify-content-center">
+            <GeneralCard
+              key={index}
+              img={`https://starwars-visualguide.com/assets/img/planets/${planet.uid}.jpg`}
+              title={planet.name}
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
