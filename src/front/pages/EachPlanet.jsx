@@ -33,7 +33,7 @@ export const EachPlanet = () => {
           body={
             <div
               id="card-info"
-              className="card-body d-flex flex-column justify-content-around"
+              className="col-sm-12 col-md-8 card-body d-flex flex-column justify-content-around"
             >
               <ul>
                 <li>

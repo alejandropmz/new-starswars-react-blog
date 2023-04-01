@@ -1,22 +1,52 @@
 #detail-card-container {
+  margin: auto;
   border: gold 2px solid;
-  width: 42rem;
-  height: 18rem;
+  width: 50rem;
   padding: 0;
+}
+
+@media screen and (max-width: 676px) {
+  #detail-card-container {
+    width: 60%;
+  }
+  #card-info ul {
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #detail-card-container {
+    width: 80%;
+  }
+
+  #detail-card-img img {
+    width: 8rem;
+    height: 10rem;
+  }
 }
 
 #detail-card-img {
   background-color: black;
+  padding: 10px 30px;
 }
 
 #detail-card-img img {
   width: 13rem;
+  height: 15rem;
   border-radius: 100%;
 }
 
 .card-title {
   text-align: center;
   margin: 20px 0;
+}
+
+#card-info ul li {
+  list-style: none;
+}
+
+#card-info ul {
+  padding: 1rem;
 }
 
 /* loading view */
@@ -31,4 +61,3 @@
   margin-right: 20px;
   border-radius: 100%;
 }
-

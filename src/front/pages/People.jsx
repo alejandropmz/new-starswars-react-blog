@@ -11,7 +11,7 @@ export const People = () => {
 
   return (
     <div className="container-fluid">
-      <h1>People</h1>
+      <h1 className="type-title">People</h1>
       <div className="row d-flex justify-content-center">
         {store.people.map((people, index) => (
           <div
@@ -21,6 +21,7 @@ export const People = () => {
             <GeneralCard
               img={`https://starwars-visualguide.com/assets/img/characters/${people.uid}.jpg`}
               title={people.name}
+              link={people.uid}
             />
           </div>
         ))}

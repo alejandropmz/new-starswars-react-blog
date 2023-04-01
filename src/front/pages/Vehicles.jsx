@@ -11,7 +11,7 @@ export const Vehicles = () => {
 
   return (
     <div className="container-fluid">
-      <h1>Vehicles</h1>
+      <h1 className="type-title">Vehicles</h1>
       <div className="row justify-content-center">
         {store.vehicles.map((vehicle, index) => (
           <div
@@ -21,6 +21,7 @@ export const Vehicles = () => {
             <GeneralCard
               img={`https://starwars-visualguide.com/assets/img/vehicles/${vehicle.uid}.jpg`}
               title={vehicle.name}
+              link={vehicle.uid}
             />
           </div>
         ))}

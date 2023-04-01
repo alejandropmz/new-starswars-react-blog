@@ -11,7 +11,7 @@ export const Species = () => {
 
   return (
     <div className="container-fluid">
-      <h1>Species</h1>
+      <h1 className="type-title">Species</h1>
       <div className="row justify-content-center">
         {store.species.map((specie, index) => (
           <div
