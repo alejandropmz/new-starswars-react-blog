@@ -27,12 +27,12 @@
 
 #detail-card-img {
   background-color: black;
-  padding: 10px 30px;
+  /* padding: 10px 30px; */
 }
 
 #detail-card-img img {
   width: 13rem;
-  height: 15rem;
+  height: 17rem;
   border-radius: 100%;
 }
 
@@ -56,7 +56,7 @@
 }
 
 #load-container img {
-  height: 70px;
+  height: 75px;
   width: 75px;
   margin-right: 20px;
   border-radius: 100%;
