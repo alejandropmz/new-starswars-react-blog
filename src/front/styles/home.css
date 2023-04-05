@@ -1,3 +1,5 @@
+
+
 #home-container {
   border: solid red 2px;
   display: flex;
@@ -23,7 +25,8 @@
   width: 230px;
 }
 
-.left, .right {
+.left,
+.right {
   padding: 10px;
 }
 
@@ -31,4 +34,50 @@
 .right .bx {
   font-size: 1.5rem;
   margin: 5px 10px;
+  cursor: pointer;
+}
+
+#search-input input {
+  height: 40%;
+}
+
+.display {
+  display: none;
+}
+
+/* buttom nav */
+
+#nav-items {
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+#nav-items .nav-item {
+  font-size: 1.1rem;
+  margin: 0 5px;
+  border-bottom: 3px solid transparent;
+}
+
+#nav-items .nav-item:hover {
+  border-bottom: 3px solid #ffe81f;
+}
+
+#nav-items .nav-item #link {
+  color: white;
+}
+
+#navbarSupportedContent {
+  margin: 20px 0 0;
+  border: 1px solid gray;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+}
+
+
+.navbar-expand-lg .container-fluid {
+  padding: 20px 0 0;
+  margin: 0;
+  background-image: url('images/cielo-estrellado.jpg');
+  color: white;
 }

@@ -3,18 +3,29 @@ import { Link } from "react-router-dom";
 import starswarsLogo from "../styles/images/pngwing.com.png";
 
 export const Navbar = () => {
+  const [showInput, setShowInput] = useState(false);
   const [navLinks, setNavLinks] = useState([
+    "new+",
     "people",
     "films",
     "starships",
     "vehicles",
     "species",
     "planets",
+    "interactive",
+    "community",
   ]);
+
+  const handleInput = () => {
+    setShowInput(!showInput);
+  };
+
   return (
     <div>
+      {/* navbar */}
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid d-block">
+          {/* navbar top, logo y redes */}
           <div className="d-flex justify-content-around">
             <div className="left d-flex">
               <i className="bx bxl-facebook-circle"></i>
@@ -26,8 +37,22 @@ export const Navbar = () => {
                 <img id="logo-nav" src={starswarsLogo} alt="" />
               </Link>
             </div>
-            <div className="right">
-              <i className="bx bx-search-alt-2"></i>
+            <div className="right d-flex">
+              <div className="search d-flex">
+                <form id="search-input" className="d-flex">
+                  <i onClick={handleInput} className="bx bx-search-alt-2"></i>
+                  <input
+                    className={
+                      showInput
+                        ? "form-control me-2"
+                        : "form-control me-2 display"
+                    }
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                </form>
+              </div>
               <i className="bx bx-user"></i>
             </div>
           </div>
@@ -44,34 +69,24 @@ export const Navbar = () => {
               <span className="navbar-toggler-icon"></span>
             </button>
             <div
-              className="collapse navbar-collapse"
+              className="collapse navbar-collapse d-flex align-items-center"
               id="navbarSupportedContent"
             >
-              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <ul id="nav-items" className="navbar-nav me-auto mb-2 mb-lg-0">
                 {navLinks.map((link, index) => (
                   <li key={index} className="nav-item">
                     <Link
+                      id="link"
                       to={"/" + link}
                       key={index}
                       className="nav-link active"
                       aria-current="page"
                     >
-                      {link}
+                      {link.toUpperCase()}
                     </Link>
                   </li>
                 ))}
               </ul>
-              <form className="d-flex">
-                <input
-                  className="form-control me-2"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />{" "}
-                <button className="btn btn-outline-success" type="submit">
-                  Search
-                </button>
-              </form>
             </div>
           </div>
         </div>

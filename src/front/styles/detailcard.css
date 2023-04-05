@@ -26,12 +26,12 @@
 }
 
 #detail-card-img {
-  background-color: black;
+  background-image: url('images/cielo-estrellado.jpg');
   /* padding: 10px 30px; */
 }
 
 #detail-card-img img {
-  width: 13rem;
+  width: 16rem;
   height: 17rem;
   border-radius: 100%;
 }
