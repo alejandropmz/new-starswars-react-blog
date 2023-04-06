@@ -16,6 +16,7 @@ import { EachSpecies } from "./pages/EachSpecies";
 import { EachStarship } from "./pages/EachStarship";
 import { EachVehicles } from "./pages/EachVehicles";
 import injectContext from "./store/appContext";
+import { Signin } from "./pages/Signin";
 
 const Layout = () => {
   return (
@@ -35,6 +36,7 @@ const Layout = () => {
         <Route path="/species/:id" element={<EachSpecies />} />
         <Route path="/planets" element={<Planets />} />
         <Route path="/planets/:id" element={<EachPlanet />} />
+        <Route path="/signin" element={<Signin />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>

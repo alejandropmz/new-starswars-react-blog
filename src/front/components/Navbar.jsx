@@ -40,23 +40,29 @@ export const Navbar = () => {
             <div className="right d-flex">
               <div className="search d-flex">
                 <form id="search-input" className="d-flex">
-                  <i onClick={handleInput} className="bx bx-search-alt-2"></i>
-                  <input
-                    className={
-                      showInput
-                        ? "form-control me-2"
-                        : "form-control me-2 display"
-                    }
-                    type="search"
-                    placeholder="Search"
-                    aria-label="Search"
-                  />
+                  <div className="d-flex">
+                    <i onClick={handleInput} className="bx bx-search-alt-2"></i>
+                    {!showInput ? <h5 id="login">Search</h5> : ""}
+                    <input
+                      className={
+                        showInput
+                          ? "form-control me-2"
+                          : "form-control me-2 display"
+                      }
+                      type="search"
+                      placeholder="Search"
+                      aria-label="Search"
+                    />
+                  </div>
                 </form>
               </div>
-              <i className="bx bx-user"></i>
+              <Link to={"/signin"} id="nav-logo" className="d-flex">
+                <i className="bx bx-user"></i>
+                <h5 id="login">Sign in</h5>
+              </Link>
             </div>
           </div>
-          <div>
+          <div className="d-flex" style={{ border: "solid red 3px" }}>
             <button
               className="navbar-toggler"
               type="button"
