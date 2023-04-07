@@ -1,12 +1,36 @@
 #general-card {
   margin: 20px 0;
+  background: #1d1e1f;
+  color: white;
 }
 
 #general-card .card-body {
   text-align: center;
-  margin: 10px 0;
+  margin: 0 0 10px;
 }
 
 #general-card .card-body * {
   margin: 5px 0;
+}
+
+#line {
+  border: solid 2px;
+  border-radius: 100%;
+  width: 30px;
+}
+
+.btn-primary {
+  border: none;
+  background-color: #ead517;
+  color: #1d1e1f;
+}
+
+.btn-primary:hover {
+  background-color: #afa015;
+  color: #464849;
+}
+
+
+.btn-primary:focus {
+  border: none;
 }

@@ -56,7 +56,7 @@ export const EachFilm = () => {
                 </li>
               </ul>
               <div className="button d-flex justify-content-end">
-                <Link to={-1} className="btn btn-warning ">
+                <Link to={-1} className="btn btn-primary ">
                   back
                 </Link>
               </div>

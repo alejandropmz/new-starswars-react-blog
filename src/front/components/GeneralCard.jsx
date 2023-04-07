@@ -6,6 +6,8 @@ export const GeneralCard = ({ img, title, link }) => {
     <div id="general-card" className="card" style={{ width: "18rem" }}>
       <img src={img} className="card-img-top" alt="..." />
       <div className="card-body">
+        <hr id="line" />
+        <hr id="line" />
         <h5 className="card-title">{title}</h5>
         <Link to={link} className="btn btn-primary">
           Go somewhere

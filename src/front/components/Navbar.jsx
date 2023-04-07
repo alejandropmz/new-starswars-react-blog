@@ -49,7 +49,7 @@ export const Navbar = () => {
                 className={!showSearch ? "bx bx-search d-flex" : "d-none"}
               >
                 <p className={showSearch ? "d-none" : ""} id="icons-text">
-                  search
+                  SEARCH
                 </p>
               </i>
               <form className="d-flex">
@@ -66,11 +66,11 @@ export const Navbar = () => {
                 />
               </form>
             </div>
-            <div className="login d-flex">
+            <Link to={"/signin"} className="login d-flex">
               <i className="bx bx-user d-flex">
-                <p id="icons-text">Log in</p>
+                <p id="icons-text">SIGN IN</p>
               </i>
-            </div>
+            </Link>
           </div>
         </div>
         <div id="item-menu-container" className="container-fluid">
