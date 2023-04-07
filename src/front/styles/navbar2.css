@@ -1,0 +1,85 @@
+#all-nav {
+  background-image: url("images/cielo-estrellado.jpg");
+}
+
+.nav-top-center img {
+  height: 110px;
+  width: 225px;
+}
+
+.nav-top-left i,
+.nav-top-right i {
+  font-size: 1.5rem;
+  margin: 5px;
+  cursor: pointer;
+  color: white;
+}
+
+.nav-top-left i:hover,
+.nav-top-right i:hover {
+  color: rgb(179, 175, 175);
+}
+
+.search input {
+  height: 32px;
+}
+
+#icons-text {
+  color: white;
+  font-size: 1.3rem;
+}
+
+#item-menu-container {
+  padding: 5px 0;
+}
+
+#navbarSupportedContent ul {
+  margin: auto;
+  font-size: 1.4rem;
+}
+
+#navbarSupportedContent ul * {
+  color: white;
+}
+
+#nav-center *:hover {
+  color: rgb(194, 189, 189);
+}
+
+.nav-item .menu-item {
+  margin: 0 5px;
+  border: solid transparent 5px;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  color: white;
+}
+
+.nav-item .menu-item:hover {
+  border: solid gold 5px;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  transition: all ease-in 0.3s;
+}
+
+@media screen and (max-width: 992px) {
+  .nav-item {
+    margin: auto;
+  }
+}
+
+/* button collapse */
+
+#navbarSupportedContent {
+  border: solid blue 4px;
+  text-align: center;
+}
+
+.navbar-toggler {
+  border: red solid 2px;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+  color: white;
+}

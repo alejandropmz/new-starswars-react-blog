@@ -62,7 +62,7 @@ export const Navbar = () => {
               </Link>
             </div>
           </div>
-          <div className="d-flex" style={{ border: "solid red 3px" }}>
+          <div className="d-flex">
             <button
               className="navbar-toggler"
               type="button"

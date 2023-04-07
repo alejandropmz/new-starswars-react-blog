@@ -18,7 +18,7 @@
 
 /* top Nav */
 
-#logo-nav {
+/* #logo-nav {
   height: 100px;
   width: 230px;
 }
@@ -47,11 +47,11 @@
 
 .display {
   display: none;
-}
+} */
 
 /* buttom nav */
 
-#nav-items {
+/* #nav-items {
   margin: 0 auto;
   padding: 0 10px;
 }
@@ -91,3 +91,4 @@
   background-image: url("images/cielo-estrellado.jpg");
   color: white;
 }
+ */

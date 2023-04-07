@@ -17,11 +17,13 @@ import { EachStarship } from "./pages/EachStarship";
 import { EachVehicles } from "./pages/EachVehicles";
 import injectContext from "./store/appContext";
 import { Signin } from "./pages/Signin";
+import { Navbar2 } from "./components/Navbar2";
 
 const Layout = () => {
   return (
     <BrowserRouter>
-      <Navbar />
+      {/* <Navbar /> */}
+      <Navbar2 />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/people" element={<People />} />
