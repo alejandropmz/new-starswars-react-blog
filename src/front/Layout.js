@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Navbar } from "./components/Navbar";
 import { Home } from "./pages/Home";
 import { People } from "./pages/People";
 import { Films } from "./pages/Films";
@@ -17,13 +16,12 @@ import { EachStarship } from "./pages/EachStarship";
 import { EachVehicles } from "./pages/EachVehicles";
 import injectContext from "./store/appContext";
 import { Signin } from "./pages/Signin";
-import { Navbar2 } from "./components/Navbar2";
+import { Navbar } from "./components/Navbar";
 
 const Layout = () => {
   return (
     <BrowserRouter>
-      {/* <Navbar /> */}
-      <Navbar2 />
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/people" element={<People />} />

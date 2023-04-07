@@ -1,10 +1,8 @@
+@import url('front/styles/navbar.css');
 @import url('front/styles/home.css');
 @import url('front/styles/generalcard.css');
 @import url('front/styles/detailcard.css');
 @import url('front/styles/signin.css');
-
-/* nav2 */
-@import url('front/styles/navbar2.css');
 
 * {
   margin: 0;
