@@ -10,6 +10,6 @@
 }
 
 body {
-  background: black;
+  background-image: url('front/styles/images/cielo-estrellado.jpg');
   color: white;
 }

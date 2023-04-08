@@ -1,24 +1,20 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import { Context } from "../store/appContext";
-import { FilmsCard, GeneralCard } from "../components/GeneralCard";
+import { GeneralCard } from "../components/GeneralCard";
 
 export const Films = () => {
   const { store, actions } = useContext(Context);
-  const [show, setShow] = useState(false);
-
-  /*   const showContent = () => {
-    actions.getFilms();
-    setShow(!show);
-  }; */
 
   useEffect(() => {
     actions.getFilms();
   }, []);
 
   return (
-    <div className="container-fluid">
-      <h1 className="type-title">films</h1>
-      <div id="" className="row d-flex justify-content-center">
+    <div className="container-fluid d-flex flex-column justify-content-center">
+      <div className="type">
+        <h1 className="type-title">films</h1>
+      </div>
+      <div id="" className="row justify-content-center">
         {store.films.map((film, index) => (
           <div
             key={index}

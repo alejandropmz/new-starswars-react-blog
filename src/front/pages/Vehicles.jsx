@@ -11,7 +11,9 @@ export const Vehicles = () => {
 
   return (
     <div className="container-fluid">
-      <h1 className="type-title">Vehicles</h1>
+      <div className="type">
+        <h1 className="type-title">Vehicles</h1>
+      </div>
       <div className="row justify-content-center">
         {store.vehicles.map((vehicle, index) => (
           <div

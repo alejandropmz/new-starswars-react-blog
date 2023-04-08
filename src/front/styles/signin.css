@@ -1,5 +1,6 @@
 .sign-container {
-  border: 2px solid gold;
+  border-radius: 3px;
+  border: 1px solid gold;
   padding: 40px 0;
   width: 100%;
   max-width: 300px;
@@ -21,6 +22,8 @@
 
 #username,
 #password {
+  background: transparent;
+  color: white;
   width: 100%;
   padding: 5px;
   border: 1px solid gray;
@@ -31,7 +34,8 @@
 
 #username::placeholder,
 #password::placeholder {
-  font-size: 12px;
+  font-size: 15px;
+  color: rgb(156, 151, 151);
 }
 
 #username:focus-visible,
@@ -53,9 +57,14 @@
 }
 
 .sign-footer i {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
+  margin: 2px 5px;
 }
 
 #search-input input {
   height: 40%;
+}
+#forgot-password-link {
+  text-decoration: none;
+  color: white;
 }

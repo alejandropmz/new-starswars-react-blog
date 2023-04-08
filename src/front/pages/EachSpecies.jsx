@@ -27,7 +27,13 @@ export const EachSpecies = () => {
 
   return (
     <div>
-      <h1 className="card-title">{data ? data.name : ""}</h1>
+      {data ? (
+        <div className="type-detail">
+          <h1 className="card-title">{data.name}</h1>
+        </div>
+      ) : (
+        ""
+      )}
       {!data ? (
         <WaitView type={"SPECIE"} />
       ) : (

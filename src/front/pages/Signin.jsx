@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const Signin = () => {
   return (
@@ -22,7 +23,9 @@ export const Signin = () => {
             <input id="password" type="text" placeholder="Type your password" />
             <br />
             <div id="forgot" className=" d-flex justify-content-end">
-              <small>Forgot password?</small>
+              <Link id="forgot-password-link">
+                <small>Forgot password?</small>
+              </Link>
             </div>
             <button id="form-button" type="submit">
               Sign in

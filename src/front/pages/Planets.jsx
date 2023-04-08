@@ -11,7 +11,9 @@ export const Planets = () => {
 
   return (
     <div>
-      <h1 className="type-title">Planets</h1>
+      <div className="type">
+        <h1 className="type-title">Planets</h1>
+      </div>
       <div className="row d-flex justify-content-center">
         {store.planets.map((planet, index) => (
           <div

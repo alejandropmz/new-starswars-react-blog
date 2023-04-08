@@ -1,7 +1,11 @@
 #general-card {
-  margin: 20px 0;
+  margin: 20px auto;
   background: #1d1e1f;
   color: white;
+}
+
+@media screen and (max-width: 545px) {
+  
 }
 
 #general-card .card-body {

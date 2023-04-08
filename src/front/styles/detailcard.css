@@ -1,6 +1,7 @@
 #detail-card-container {
-  margin: auto;
-  border: gold 2px solid;
+  margin: 20px auto 0;
+  border-radius: 3px;
+  border: gold 5px solid;
   width: 50rem;
   padding: 0;
 }
@@ -26,19 +27,23 @@
 }
 
 #detail-card-img {
-  background-image: url('images/cielo-estrellado.jpg');
+  background-image: url("images/cielo-estrellado.jpg");
   /* padding: 10px 30px; */
 }
 
 #detail-card-img img {
   width: 16rem;
-  height: 17rem;
-  border-radius: 100%;
+  height: 100%;
 }
 
 .card-title {
   text-align: center;
-  margin: 20px 0;
+  margin: 10px 0;
+}
+
+#card-info {
+  border-left: solid rgb(179, 153, 7) 5px;
+  background-color: #1d1e1f;
 }
 
 #card-info ul li {
@@ -60,4 +65,14 @@
   width: 75px;
   margin-right: 20px;
   border-radius: 100%;
+}
+
+.type-detail {
+  margin: 20px auto 0;
+  border: solid #9ca0a2 1px;
+  color: #ffe607;
+  border-left: none;
+  border-right: none;
+  width: 100%;
+  max-width: 250px;
 }

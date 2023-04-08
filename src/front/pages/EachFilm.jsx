@@ -26,7 +26,13 @@ export const EachFilm = () => {
 
   return (
     <div>
-      <h1 className="card-title">{data ? data.title : ""}</h1>
+      {data ? (
+        <div className="type-detail">
+          <h1 className="card-title">{data.title}</h1>
+        </div>
+      ) : (
+        ""
+      )}
       {!data ? (
         <WaitView type={"FILM"} />
       ) : (
@@ -67,14 +73,3 @@ export const EachFilm = () => {
     </div>
   );
 };
-
-/* 
-
-"created": "2023-04-01T03:48:43.642Z",
-"edited": "2023-04-01T03:48:43.642Z",
-"producer": "Gary Kurtz, Rick McCallum",
-"title": "The Empire Strikes Back",
-"episode_id": 5,
-"director": "Irvin Kershner",
-"release_date": "1980-05-17",
-*/

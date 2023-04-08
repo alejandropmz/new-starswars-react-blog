@@ -11,7 +11,9 @@ export const People = () => {
 
   return (
     <div className="container-fluid">
-      <h1 className="type-title">People</h1>
+      <div className="type">
+        <h1 className="type-title">People</h1>
+      </div>
       <div className="row d-flex justify-content-center">
         {store.people.map((people, index) => (
           <div
