@@ -3,6 +3,7 @@
 @import url('front/styles/generalcard.css');
 @import url('front/styles/detailcard.css');
 @import url('front/styles/signin.css');
+@import url('front/styles/interactive.css');
 
 * {
   margin: 0;

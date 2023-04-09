@@ -17,6 +17,7 @@ import { EachVehicles } from "./pages/EachVehicles";
 import injectContext from "./store/appContext";
 import { Signin } from "./pages/Signin";
 import { Navbar } from "./components/Navbar";
+import { Interactive } from "./pages/Interactive";
 
 const Layout = () => {
   return (
@@ -37,6 +38,7 @@ const Layout = () => {
         <Route path="/planets" element={<Planets />} />
         <Route path="/planets/:id" element={<EachPlanet />} />
         <Route path="/signin" element={<Signin />} />
+        <Route path="/interactive" element={<Interactive />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>

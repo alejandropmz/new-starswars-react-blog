@@ -1,0 +1,140 @@
+.games-app-container {
+  background: black;
+  padding: 0 0 30px;
+  margin-top: 30px;
+}
+
+.games-app-container img {
+  height: 100%;
+  width: 100%;
+}
+
+.text-button {
+  margin: 40px 0;
+  padding: 0 80px;
+  text-align: center;
+}
+
+.text-button h1 {
+  margin-bottom: 30px;
+}
+
+.text-button h2 {
+  margin: 30px 0;
+}
+
+.text-button button {
+  width: 320px;
+  border: none;
+  padding: 20px;
+  background: #449b5c;
+  color: white;
+  font-size: 1.3rem;
+  border-radius: 35px;
+}
+
+@media screen and (max-width: 505px) {
+  .text-button {
+    padding: 0 40px;
+  }
+  .text-button button {
+    width: 250px;
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .text-button button {
+    width: 200px;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 315px) {
+  .text-button button {
+    width: 100px;
+    font-size: 0.9rem;
+  }
+}
+
+.sub-title {
+  /*  background: black;
+ */
+  padding: 5px;
+  border: solid #545c5c 4px;
+  border-width: 0 0 4px 0;
+}
+
+/* big card */
+
+.big-card-container {
+  margin: auto;
+  width: 100%;
+  background: black;
+  padding: 10px 0;
+}
+
+/* medium card */
+
+.medium-card-conteiner {
+  padding: 0;
+  height: 100%;
+}
+
+.medium-card-conteiner img {
+  width: 100%;
+  height: 100%;
+}
+
+.text-card {
+  padding: 20px;
+  background: #1d1e1f;
+}
+
+.small-card-container div {
+  width: 100%;
+}
+
+/* small card */
+
+.small-card-container {
+  margin: 3px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .small-card-container {
+    margin: 20px 0;
+  }
+}
+
+.small-card-container .img img {
+  width: 100%;
+}
+
+.small-card-container .text {
+  padding: 10px;
+  background: #1d1e1f;
+  text-overflow: clip;
+  /* white-space: nowrap; */
+  overflow: hidden;
+}
+
+.small-card-container .text * {
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 440px) {
+  .small-card-container .text {
+    padding: 10px;
+    background: #1d1e1f;
+    text-overflow: clip;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .small-card-container .text * {
+    font-size: .7rem;
+  }
+}
+
+
