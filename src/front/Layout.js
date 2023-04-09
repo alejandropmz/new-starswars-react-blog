@@ -18,6 +18,7 @@ import injectContext from "./store/appContext";
 import { Signin } from "./pages/Signin";
 import { Navbar } from "./components/Navbar";
 import { Interactive } from "./pages/Interactive";
+import { Footer } from "./components/Footer";
 
 const Layout = () => {
   return (
@@ -41,6 +42,7 @@ const Layout = () => {
         <Route path="/interactive" element={<Interactive />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 };

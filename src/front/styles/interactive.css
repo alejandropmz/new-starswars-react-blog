@@ -58,11 +58,9 @@
 }
 
 .sub-title {
-  /*  background: black;
- */
   padding: 5px;
-  border: solid #545c5c 4px;
-  border-width: 0 0 4px 0;
+  border: solid #545c5c;
+  border-width: 0 0 2px 0;
 }
 
 /* big card */
@@ -70,7 +68,6 @@
 .big-card-container {
   margin: auto;
   width: 100%;
-  background: black;
   padding: 10px 0;
 }
 

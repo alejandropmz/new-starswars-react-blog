@@ -4,6 +4,7 @@
 @import url('front/styles/detailcard.css');
 @import url('front/styles/signin.css');
 @import url('front/styles/interactive.css');
+@import url('front/styles/footer.css');
 
 * {
   margin: 0;

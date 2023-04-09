@@ -1,6 +1,6 @@
 #all-nav {
   background-image: url("images/cielo-estrellado.jpg");
-  border-bottom: 2px rgb(61, 59, 59) solid;
+  border-bottom: 1px #676464 solid;
 }
 
 .top-nav * {
