@@ -1,0 +1,24 @@
+#pagination-nav ul li {
+  border: none;
+}
+
+#pagination-nav ul li .page-link {
+  background: transparent;
+  border: solid #afa015 1px;
+  color: white;
+  border-color: #afa015 transparent;
+  border-width: 1px 0;
+}
+
+#pagination-nav ul li .page-link:hover {
+  background: #eed817;
+  border: solid #eed817 1px;
+  border-color: #afa015 transparent;
+  border-width: 1px 0;
+  color: black;
+  transition: all ease-in .3s;
+}
+
+#pagination-nav ul li .page-link:focus {
+  outline: none;
+}

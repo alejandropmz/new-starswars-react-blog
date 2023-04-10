@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Context } from "../store/appContext";
 import { GeneralCard } from "../components/GeneralCard";
+import { Pagination } from "../components/Pagination";
 
 export const Planets = () => {
   const { store, actions } = useContext(Context);
@@ -10,7 +11,7 @@ export const Planets = () => {
   }, []);
 
   return (
-    <div>
+    <div className="container-fluid">
       <div className="type">
         <h1 className="type-title">Planets</h1>
       </div>
@@ -28,6 +29,7 @@ export const Planets = () => {
           </div>
         ))}
       </div>
+      <Pagination />
     </div>
   );
 };

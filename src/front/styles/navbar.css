@@ -24,6 +24,7 @@
 #input-search {
   border: solid gold 2px;
   background: transparent;
+  color: rgb(201, 198, 198);
 }
 
 #input-search::placeholder {
