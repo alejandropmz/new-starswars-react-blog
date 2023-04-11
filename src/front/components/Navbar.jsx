@@ -86,7 +86,7 @@ export const Navbar = () => {
                     }
                     id="span"
                   >
-                    <span className={searchData !== "" ? "" : "d-none"}>
+                    <span className={searchData == "" ? "d-none" : ""}>
                       hola
                     </span>
                   </Link>
