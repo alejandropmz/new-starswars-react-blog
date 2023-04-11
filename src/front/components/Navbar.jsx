@@ -1,11 +1,25 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 
 /* logo starswars */
 import starWarsLogo from "../styles/images/pngwing.com.png";
+import { Context } from "../store/appContext";
 
 export const Navbar = () => {
+  const { store } = useContext(Context);
+
   const [showSearch, setShowSearch] = useState(false);
+  const [searchData, setsearchData] = useState("");
+
+  const handleSearchData = (e) => {
+    console.log(filterItems);
+    setsearchData(e.target.value);
+  };
+
+  const filterItems = store.planets.filter((planet) =>
+    planet.name.toLowerCase().includes(searchData.toLowerCase())
+  );
+
   const handleSearch = () => {
     setShowSearch(!showSearch);
   };
@@ -57,13 +71,30 @@ export const Navbar = () => {
                   onClick={handleSearch}
                   className={showSearch ? "bx bx-x" : ""}
                 ></i>
-                <input
-                  id="input-search"
-                  className={showSearch ? "form-control me-2" : "d-none"}
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
+                <div id="input-span">
+                  <input
+                    id="input-search"
+                    onChange={handleSearchData}
+                    className={showSearch ? "form-control me-2" : "d-none"}
+                    type="search"
+                    placeholder="Search"
+                    aria-label="Search"
+                  />
+                  <Link
+                    className={
+                      !showSearch ? "d-none" : "d-flex justify-content-center"
+                    }
+                    id="span"
+                  >
+                    <span className={searchData !== "" ? "" : "d-none"}>
+                      hola
+                    </span>
+                  </Link>
+                  {/* <Link className="d-flex justify-content-center" id="span" to={"planets/" + filterItems[0].uid}>
+                    <img src={`https://starwars-visualguide.com/assets/img/planets/${filterItems[0].uid}.jpg`} alt="" />
+                    <span>{filterItems[0].name}</span>
+                  </Link> */}
+                </div>
               </form>
             </div>
             <Link to={"/signin"} className="login d-flex">
@@ -106,3 +137,15 @@ export const Navbar = () => {
     </div>
   );
 };
+
+/*   const [searchData, setSearchData] = useState(""); */
+
+/*   const handleSearchData = async (e) => {
+    console.log(e.target.value);
+    await store
+    for (let item in store){
+      console.log(item)
+    }
+  }; */
+
+/* console.log(store.species[0].name) */
