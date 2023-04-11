@@ -86,9 +86,9 @@ export const Navbar = () => {
                     }
                     id="span"
                   >
-                    <span className={searchData == "" ? "d-none" : ""}>
+                    {/* <span className={searchData == "" ? "d-none" : ""}>
                       hola
-                    </span>
+                    </span> */}
                   </Link>
                   {/* <Link className="d-flex justify-content-center" id="span" to={"planets/" + filterItems[0].uid}>
                     <img src={`https://starwars-visualguide.com/assets/img/planets/${filterItems[0].uid}.jpg`} alt="" />
