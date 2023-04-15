@@ -23,6 +23,13 @@
   width: 30px;
 }
 
+#line:hover {
+  border: solid 1px;
+  border-radius: 100%;
+  width: 30px;
+  color: #ead517;
+}
+
 .btn-primary {
   border: none;
   background-color: #ead517;

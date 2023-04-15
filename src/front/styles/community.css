@@ -1,0 +1,28 @@
+.community-container {
+  margin-top: 40px;
+}
+
+.community-container .sub-title {
+  width: 97%;
+  margin: 0 15px;
+}
+
+.community-container .sub-title * {
+  margin: 0;
+}
+
+#community-title {
+  margin-bottom: 50px;
+}
+
+.simple-card-container {
+  height: 90%;
+}
+
+.simple-card-container .card-title {
+  padding-top: 20px;
+}
+
+.text-buttom * {
+  color: rgb(201, 194, 194);
+}

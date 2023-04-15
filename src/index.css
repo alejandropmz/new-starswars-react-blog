@@ -6,6 +6,7 @@
 @import url('front/styles/interactive.css');
 @import url('front/styles/footer.css');
 @import url('front/styles/pagination.css');
+@import url('front/styles/community.css');
 
 * {
   margin: 0;

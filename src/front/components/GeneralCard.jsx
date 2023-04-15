@@ -3,6 +3,11 @@ import { Link } from "react-router-dom";
 
 export const GeneralCard = ({ img, title, link }) => {
 
+  /* Para la lógica de gifs aleatorios
+    Para que funcione solo pasar en la función takeLoadError 
+    el valor del resultado de randomGif
+  */
+
   const gifs = [
     "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjVhMTAzNjlhNTk4ZTVjNGVkOTI3NWI5ZjQ2NDM3ZWMxMTliNTBjNCZjdD1n/obnNO8h7UcLMA/giphy.gif",
     "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWM3ZmRlMjdkN2UyZjljMDJmOGM5NzYyYjMxYWJhMjk0OTIxZGMyZSZjdD1n/EMJB7ewmSDeDMhJkyo/giphy.gif",
@@ -18,7 +23,7 @@ export const GeneralCard = ({ img, title, link }) => {
   const randomGif = gifs[randomNumber];
 
   const takeLoadError = (e) => {
-    e.target.src = randomGif;
+    e.target.src = "https://i.pinimg.com/originals/e8/63/92/e863927635dc1c5aba5663e8dd33efa0.jpg";
   };
 
   return (

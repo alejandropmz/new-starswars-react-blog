@@ -18,6 +18,7 @@ import injectContext from "./store/appContext";
 import { Signin } from "./pages/Signin";
 import { Navbar } from "./components/Navbar";
 import { Interactive } from "./pages/Interactive";
+import { Community } from "./pages/Community";
 import { Footer } from "./components/Footer";
 
 const Layout = () => {
@@ -40,6 +41,7 @@ const Layout = () => {
         <Route path="/planets/:id" element={<EachPlanet />} />
         <Route path="/signin" element={<Signin />} />
         <Route path="/interactive" element={<Interactive />} />
+        <Route path="/community" element={<Community />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <Footer />

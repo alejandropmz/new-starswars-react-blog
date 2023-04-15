@@ -1,11 +1,24 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Context } from "../store/appContext";
 import { GeneralCard } from "../components/GeneralCard";
+import { Pagination } from "../components/Pagination";
 
 export const Species = () => {
   const { store, actions } = useContext(Context);
+  const [totalPages, setTotalPages] = useState();
+
+  const speciesfetch = async () => {
+    try {
+      const response = await fetch("https://www.swapi.tech/api/species/");
+      const responseJSON = await response.json();
+      setTotalPages(responseJSON.total_pages);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   useEffect(() => {
+    speciesfetch();
     actions.getSpecies();
   });
 
@@ -28,6 +41,11 @@ export const Species = () => {
           </div>
         ))}
       </div>
+      {!totalPages ? (
+        ""
+      ) : (
+        <Pagination type={"species"} numberPages={totalPages} currentPage={2} />
+      )}
     </div>
   );
 };

@@ -16,7 +16,7 @@ export const Navbar = () => {
     setsearchData(e.target.value);
   };
 
-  const filterItems = store.planets.filter((planet) =>
+  const filterItems = store.planets.results?.filter((planet) =>
     planet.name.toLowerCase().includes(searchData.toLowerCase())
   );
 

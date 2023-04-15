@@ -54,11 +54,11 @@ const getState = ({ getStore, getActions, setStore }) => {
           console.error(error);
         }
       },
-      getPlanets: async () => {
+      getPlanets: async (url) => {
         try {
-          const response = await fetch("https://swapi.tech/api/planets");
+          const response = await fetch(url);
           const responseJSON = await response.json();
-          setStore({ ...getStore(), planets: responseJSON.results });
+          setStore({ ...getStore(), planets: responseJSON });
         } catch (error) {
           console.error(error);
         }
@@ -68,3 +68,5 @@ const getState = ({ getStore, getActions, setStore }) => {
 };
 
 export default getState;
+
+/* https://swapi.tech/api/planets */
