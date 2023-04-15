@@ -1,6 +1,7 @@
 #all-nav {
   background-image: url("images/cielo-estrellado.jpg");
   border-bottom: 1px #676464 solid;
+  padding: 10px 0 0;
 }
 
 .top-nav * {
@@ -22,7 +23,7 @@
 }
 
 #input-search {
-  border: solid gold 2px;
+  border: solid #ead517 2px;
   background: transparent;
   color: rgb(201, 198, 198);
 }
@@ -77,7 +78,7 @@
 }
 
 #item-menu-container {
-  padding: 5px 0;
+  padding: 0;
 }
 
 #navbarSupportedContent ul {
@@ -103,7 +104,7 @@
 }
 
 .nav-item .menu-item:hover {
-  border: solid gold 5px;
+  border: solid #ead517 5px;
   border-left: none;
   border-top: none;
   border-right: none;
