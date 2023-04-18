@@ -124,7 +124,7 @@ export const News = () => {
       ))}
       <div className="d-flex justify-content-center show-more-button">
         <button className="d-flex justify-content-center align-items-center">
-          SHOW MORE <i class="bx bx-chevron-down"></i>
+          SHOW MORE <i className="bx bx-chevron-down"></i>
         </button>
       </div>
       <div className="sub-title container">

@@ -111,9 +111,10 @@
 .small-card-container .text {
   padding: 10px;
   background: #1d1e1f;
-  text-overflow: clip;
   /* white-space: nowrap; */
   overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
 }
 
 .small-card-container .text * {
@@ -130,8 +131,6 @@
   }
 
   .small-card-container .text * {
-    font-size: .7rem;
+    font-size: 0.7rem;
   }
 }
-
-

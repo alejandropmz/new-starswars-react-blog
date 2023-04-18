@@ -23,9 +23,11 @@
 }
 
 #input-search {
-  border: solid #ead517 2px;
+  border: solid #c9c7c7 2px;
   background: transparent;
   color: rgb(201, 198, 198);
+  padding: 20px;
+  margin-right: 10px;
 }
 
 #input-search::placeholder {

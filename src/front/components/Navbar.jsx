@@ -80,20 +80,6 @@ export const Navbar = () => {
                     placeholder="Search"
                     aria-label="Search"
                   />
-                  <Link
-                    className={
-                      !showSearch ? "d-none" : "d-flex justify-content-center"
-                    }
-                    id="span"
-                  >
-                    {/* <span className={searchData == "" ? "d-none" : ""}>
-                      hola
-                    </span> */}
-                  </Link>
-                  {/* <Link className="d-flex justify-content-center" id="span" to={"planets/" + filterItems[0].uid}>
-                    <img src={`https://starwars-visualguide.com/assets/img/planets/${filterItems[0].uid}.jpg`} alt="" />
-                    <span>{filterItems[0].name}</span>
-                  </Link> */}
                 </div>
               </form>
             </div>
