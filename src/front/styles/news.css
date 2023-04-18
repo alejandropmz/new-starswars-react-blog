@@ -1,0 +1,55 @@
+.date small {
+  color: gray;
+}
+
+.title #news-card-title {
+  text-align: start;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+.title #news-card-title:hover {
+  color: #ada9a9;
+  transition: all ease-in 0.3s;
+}
+
+.show-more-button button {
+  padding: 0 15px;
+  border: solid #ead517 2px;
+  color: white;
+  border-radius: 35px;
+  font-weight: bold;
+  background: transparent;
+}
+
+.show-more-button button:hover {
+  box-shadow: 0 0 0 1px white;
+  transition: all ease-in 0.3s;
+}
+
+.show-more-button button i {
+  font-size: 2.2rem;
+}
+
+/* year card */
+
+.year-card-container #general-card {
+  padding: 10px 0;
+  border-radius: 10px;
+  width: 90%;
+}
+
+#general-card .year-card-body {
+  padding: 0;
+}
+
+#general-card .year-card-body .card-title {
+  padding: 0;
+  margin: 0;
+}
+
+.year-card-body * {
+  font-size: 1.6rem;
+}

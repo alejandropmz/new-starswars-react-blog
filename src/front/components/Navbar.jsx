@@ -24,7 +24,7 @@ export const Navbar = () => {
     setShowSearch(!showSearch);
   };
   const navItems = [
-    "New+",
+    "News+",
     "People",
     "Films",
     "Starships",
@@ -134,6 +134,9 @@ export const Navbar = () => {
           </div>
         </div>
       </nav>
+      <div className="container-fluid nav-buttom d-flex justify-content-center align-items-center">
+        <p>ALL OF YOUR STAR WARS FAVORITES NOW STREAMING ON DISNEY+</p>
+      </div>
     </div>
   );
 };

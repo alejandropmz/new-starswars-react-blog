@@ -20,6 +20,7 @@ import { Navbar } from "./components/Navbar";
 import { Interactive } from "./pages/Interactive";
 import { Community } from "./pages/Community";
 import { Footer } from "./components/Footer";
+import { News } from "./pages/News";
 
 const Layout = () => {
   return (
@@ -40,6 +41,7 @@ const Layout = () => {
         <Route path="/planets" element={<Planets />} />
         <Route path="/planets/:id" element={<EachPlanet />} />
         <Route path="/signin" element={<Signin />} />
+        <Route path="/news+" element={<News />} />
         <Route path="/interactive" element={<Interactive />} />
         <Route path="/community" element={<Community />} />
         <Route path="*" element={<NotFoundPage />} />
