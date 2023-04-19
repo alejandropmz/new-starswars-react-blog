@@ -35,6 +35,10 @@
 
 /* year card */
 
+.year-card-container {
+  cursor: pointer;
+}
+
 .year-card-container #general-card {
   padding: 10px 0;
   border-radius: 10px;

@@ -145,5 +145,30 @@
 .nav-buttom p {
   margin: 0;
   font-weight: bold;
-  font-size: .9rem;
+  font-size: 0.9rem;
+}
+
+/* input search */
+
+#input-ul {
+  border: solid 1px rgb(174, 161, 161);
+}
+
+#input-ul .link-li {
+  background: black;
+  color: white;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+
+#input-ul .link-li:hover {
+  background: gold;
+  color: black;
+  transition: all ease-in 0.3s;
+}
+
+#input-ul .link-li img {
+  width: 30px;
+  margin-right: 2px;
 }

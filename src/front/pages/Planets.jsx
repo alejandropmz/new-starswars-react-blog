@@ -6,6 +6,7 @@ export const Planets = () => {
   const { store, actions } = useContext(Context);
   const [next, setNext] = useState("https://swapi.tech/api/planets");
 
+
   useEffect(() => {
     actions.getPlanets(next);
     console.log(actions.getPlanets(next));

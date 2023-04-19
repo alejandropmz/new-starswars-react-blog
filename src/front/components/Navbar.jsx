@@ -22,7 +22,15 @@ export const Navbar = () => {
 
   const handleSearch = () => {
     setShowSearch(!showSearch);
+    setsearchData("")
   };
+
+  /* image not found */
+
+  const notFoundImg = (e) =>
+    (e.target.src =
+      "https://thumbs.dreamstime.com/b/icono-del-signo-de-interrogaci%C3%B3n-plano-121747717.jpg");
+
   const navItems = [
     "News+",
     "People",
@@ -80,6 +88,24 @@ export const Navbar = () => {
                     placeholder="Search"
                     aria-label="Search"
                   />
+                  <ul id="input-ul" className="list-group ">
+                    {!searchData
+                      ? ""
+                      : filterItems?.map((item, index) => (
+                          <Link
+                            to={"/planets/" + item.uid}
+                            className="list-group-item link-li d-flex justify-content-around"
+                            key={index}
+                          >
+                            <img
+                              onError={notFoundImg}
+                              src={`https://starwars-visualguide.com/assets/img/planets/${item?.uid}.jpg`}
+                              alt=""
+                            />
+                            <span>{item?.name}</span>
+                          </Link>
+                        ))}
+                  </ul>
                 </div>
               </form>
             </div>
