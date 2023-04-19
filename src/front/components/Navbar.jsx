@@ -94,7 +94,7 @@ export const Navbar = () => {
                       : filterItems?.map((item, index) => (
                           <Link
                             to={"/planets/" + item.uid}
-                            className="list-group-item link-li d-flex justify-content-around"
+                            className="list-group-item link-li d-flex justify-content-between"
                             key={index}
                           >
                             <img

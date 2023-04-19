@@ -1,7 +1,7 @@
 #detail-card-container {
   margin: 20px auto 0;
   border-radius: 3px;
-  border: gold 5px solid;
+  border: #ffe607 2px solid;
   width: 50rem;
   padding: 0;
 }
@@ -42,7 +42,7 @@
 }
 
 #card-info {
-  border-left: solid rgb(179, 153, 7) 5px;
+  border-left: solid #ffe607 2px;
   background-color: #1d1e1f;
 }
 

@@ -98,10 +98,8 @@
 
 .nav-item .menu-item {
   margin: 0 5px;
-  border: solid transparent 5px;
-  border-left: none;
-  border-top: none;
-  border-right: none;
+  border: solid transparent;
+  border-width: 0 0 5px 0;
   color: white;
 }
 
@@ -152,6 +150,8 @@
 
 #input-ul {
   border: solid 1px rgb(174, 161, 161);
+  position: absolute;
+  z-index: 1;
 }
 
 #input-ul .link-li {
