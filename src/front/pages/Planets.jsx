@@ -1,24 +1,42 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Context } from "../store/appContext";
 import { GeneralCard } from "../components/GeneralCard";
+import { Pagination } from "../components/Pagination";
 
 export const Planets = () => {
   const { store, actions } = useContext(Context);
-  const [next, setNext] = useState("https://swapi.tech/api/planets");
+  /* const [next, setNext] = useState("https://swapi.tech/api/planets"); */
 
+  const [pagination, setPagination] = useState();
+  const [nextPage, setNextPage] = useState();
 
+  const api = async () => {
+    try {
+      const response = await fetch("https://swapi.tech/api/planets");
+      const responseJSON = await response.json();
+      setPagination(responseJSON.total_pages);
+      setNextPage(responseJSON.next);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   useEffect(() => {
+    actions.getPlanets();
+    api();
+  }, []);
+
+  /*   useEffect(() => {
     actions.getPlanets(next);
     console.log(actions.getPlanets(next));
   }, [next]);
-
+ */
   return (
     <div className="container-fluid">
       <div className="type">
         <h1 className="type-title">Planets</h1>
       </div>
       <div className="row d-flex justify-content-center">
-        {store.planets.results?.map((planet, index) => (
+        {store.planets?.map((planet, index) => (
           <div
             key={index}
             className="col-sm-12 col-md-3 d-flex justify-content-center"
@@ -33,36 +51,7 @@ export const Planets = () => {
       </div>
 
       {/* pagination */}
-      <div className="d-flex justify-content-center">
-        <nav id="pagination-nav" aria-label="...">
-          <ul className="pagination">
-            <li className="page-item disabled">
-              <span className="page-link">Previous</span>
-            </li>
-            <li className="page-item">
-              <a className="page-link" href="#">
-                1
-              </a>
-            </li>
-            <li className="page-item" aria-current="page">
-              <span className="page-link">2</span>
-            </li>
-            <li className="page-item">
-              <a className="page-link" href="#">
-                3
-              </a>
-            </li>
-            <li role="button" className="page-item">
-              <span
-                className="page-link"
-                onClick={() => setNext(store?.planets?.next)}
-              >
-                Next
-              </span>
-            </li>
-          </ul>
-        </nav>
-      </div>
+      <Pagination numberPages={pagination} nextPage={nextPage} />
     </div>
   );
 };

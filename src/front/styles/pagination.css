@@ -16,7 +16,7 @@
   border-color: #afa015 transparent;
   border-width: 1px 0;
   color: black;
-  transition: all ease-in .3s;
+  transition: all ease-in 0.3s;
 }
 
 #pagination-nav ul li .page-link:hover {
@@ -25,7 +25,7 @@
   border-color: #afa015 transparent;
   border-width: 1px 0;
   color: black;
-  transition: all ease-in .3s;
+  transition: all ease-in 0.3s;
 }
 
 #pagination-nav ul li .page-link:focus {

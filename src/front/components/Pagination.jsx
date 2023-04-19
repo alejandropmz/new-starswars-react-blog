@@ -1,8 +1,42 @@
-import React from "react";
+import { React, useState } from "react";
 import { Link } from "react-router-dom";
 
-export const Pagination = ({ currentPage, numberPages, type }) => {
+export const Pagination = ({ currentPage, numberPages, nextPage }) => {
+  const [pagination, setPagination] = useState();
+
+  const pages = [];
+
+  for (let i = 1; i <= numberPages; i++) {
+    pages.push(i);
+  }
+
   return (
+    <div className="d-flex justify-content-center">
+      <nav id="pagination-nav" aria-label="...">
+        <ul className="pagination">
+          <li className="page-item disabled">
+            <span className="page-link">Previous</span>
+          </li>
+          {pages.map((page) => (
+            <li key={page} className="page-item">
+              <Link className="page-link" href="#">
+                {page}
+              </Link>
+            </li>
+          ))}
+          <li role="button" className="page-item">
+            <span className="page-link" onClick={() => console.log({ nextPage })}>
+              Next
+            </span>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  );
+};
+
+/* 
+
     <div className="d-flex justify-content-center">
       <nav id="pagination-nav" aria-label="...">
         <ul className="pagination">
@@ -42,8 +76,7 @@ export const Pagination = ({ currentPage, numberPages, type }) => {
         </ul>
       </nav>
     </div>
-  );
-};
+*/
 
 /* 
 <li className="page-item">

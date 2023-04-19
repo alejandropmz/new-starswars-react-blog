@@ -17,7 +17,6 @@ const getState = ({ getStore, getActions, setStore }) => {
       console.log(error);
     }
   };
-
   // paso 3 return con el store de los arreglos vacios para llenar la información
 
   return {
@@ -57,7 +56,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 export default getState;
 
-// primera versión de consumo de api 
+// primera versión de consumo de api
 
 /* const getState = ({ getStore, getActions, setStore }) => {
   return {

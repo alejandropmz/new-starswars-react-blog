@@ -5,21 +5,22 @@ import { Pagination } from "../components/Pagination";
 
 export const Species = () => {
   const { store, actions } = useContext(Context);
-  const [totalPages, setTotalPages] = useState();
+  const [pagination, setPagination] = useState();
+  const [nextPage, setNextPage] = useState();
 
-  const speciesfetch = async () => {
+  const api = async () => {
     try {
-      const response = await fetch("https://www.swapi.tech/api/species/");
+      const response = await fetch("https://swapi.tech/api/species");
       const responseJSON = await response.json();
-      setTotalPages(responseJSON.total_pages);
+      setPagination(responseJSON.total_pages);
+      setNextPage(responseJSON.next);
     } catch (error) {
       console.log(error);
     }
   };
-
   useEffect(() => {
-    speciesfetch();
     actions.getSpecies();
+    api();
   });
 
   return (
@@ -41,11 +42,9 @@ export const Species = () => {
           </div>
         ))}
       </div>
-      {!totalPages ? (
-        ""
-      ) : (
-        <Pagination type={"species"} numberPages={totalPages} currentPage={2} />
-      )}
+
+      {/* pagination */}
+      <Pagination numberPages={pagination} nextPage={nextPage} />
     </div>
   );
 };
